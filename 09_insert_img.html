@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Motor Speed Estimation with M/T Method Algortihm for Rotary Incremental Encoder 1024 PPR</title>
+</head>
+
+<body>
+<h1 id="top">Here is listed a few chapters of my thesis.</h1>
+Contents : 
+<ol>
+	<li><a href="#Abstrak">Abstrak</a></li>
+	<li><a href="#Pendahuluan">Pendahuluan</a></li>
+	<li><a href="#Metode">Metode Penelitian</a></li>
+</ol>
+
+<section id="Abstrak">
+	<h2>Abstrak</h2>
+	<p>
+		Dengan semakin meningkatnya demand atas kendaraan listrik, penggunaan motor listrik sebagai komponen utama penggerak kendaraan pun semakin marak. Dalam pengoperasian motor listrik, salah satu parameter kerja yang butuh diketahui adalah kecepatan. Informasi ini dibutuhkan agar pengguna dapat mengetahui kecepatan kendaraannya lewat speedometer. Lebih lanjut, sebagai bagian penting dari sistem kendali untuk kendaraan otomatis. Untuk mengetahui kecepatan motor, perlu digunakan sensor. Salah satu sensor yang dapat digunakan adalah rotary incremental encoder. Estimasi kecepatan lewat sensor ini didapat dari memperhitungkan banyaknya pulsa-pulsa encoder yang dihasilkan dalam satu satuan waktu menggunakan M/T Method. Sementara itu, kalkulasi dilakukan menggunakan mikrokontroler, dalam hal ini STM32F4-DISCOVERY (STM32F407VG).
+	</p>
+</section>
+<section id="Pendahuluan">
+	<h2>Pendahuluan</h2>
+	<p>
+		Setiap tahun, tuntutan akan keberadaan mobil listrik semakin meningkat. Pada tahun 2018, jumlah mobil listrik di seluruh dunia mencapai lebih dari 5 juta buah, peningkatan sebesar 63% dibandingkan tahun sebelumnya [1]. Salah satu alasan yang mendasari hal ini adalah performa mobil listrik yang lebih ramah lingkungan, terutama dalam produksi CO2, jika dibandingkan dengan mobil konvensional dengan sistem internal combustion engine (ICE) [2].
+		 
+		Pada mobil listrik, elemen penggerak yang digunakan adalah motor listrik. Jenis-jenis motor listrik yang biasa digunakan, dengan performa yang beragam, diantaranya induction motor, permanent magnet synchronous motor, dan permanent magnet brushless DC motor [3].
+		 
+		Apapun jenis motor listrik yang digunakan, salah satu parameter kerja motor yang perlu diketahui adalah kecepatan. Informasi mengenai kecepatan motor bisa digunakan, diantaranya, untuk mendesain automatic brake system (ABS) maupun traction control system (TCS) pada mobil listrik [4]. Untuk mengetahui kecepatan motor, dibutuhkan sensor.
+		
+		Sensor yang dapat digunakan untuk mengawasi kondisi putar shaft motor, untuk selanjutnya diestimasi sebagai kecepatan, adalah encoder [5]. Sementara itu, M/T Method dapat digunakan sebagai metode untuk melakukan estimasi kecepatan berdasarkan informasi dari encoder [6]. Proses ini bisa dilakukan menggunakan mikrokontroler, diantaranya adalah produk-produk dari STM32.
+		
+		Tujuan dari penelitian ini adalah untuk menghasilkan program pada mikrokontroler berbasis STM32 untuk melakukan estimasi kecepatan motor menggunakan sensor encoder dengan algoritma M/T Method serta melakukan pembuktian dengan menggunakan motor DC.
+		
+		Program sensor kecepatan akan dibuat pada mikrokontroler STM32F4-DISCOVERY (STM32F407VG) berdasarkan algoritma M/T Method dengan menggunakan sensor Autonics Rotary Encoder model E40HB10-1024-6-L-5. Motor yang digunakan adalah motor DC dengan variable power supply.
+	</p>
+</section>
+<section id="Metode">
+	<h2>Metode Penelitian</h2>
+	<p>
+		Penelitian dimulai dengan melakukan studi literatur mengenai cara kerja sensor optical rotary incremental encoder serta bagaimana algoritma M/T Method dapat digunakan untuk melakukan estimasi kecepatan. Selanjutnya, dilakukan simulasi menggunakan pemrograman C-MEX pada Simulink yang dapat merepresentasikan cara kerja encoder serta algoritma M/T Method. Setelah program berhasil dikembangkan pada simulasi, realisasi dan pengujian dilakukan menggunakan encoder dari Autonics dengan model E40HB10-1024-6-L-5. Pengambilan data dilakukan untuk kondisi kecepatan motor bervariasi, kecepatan motor konstan pada kecepatan relatif rendah, sedang, dan tinggi, serta kecepatan motor konstan pada kecepatan relatif rendah, sedang, dan tinggi dengan kondisi sensor dipanaskan. Implementasi algoritma dilakukan pada mikrokontroler STM32F4-DISCOVERY (STM32F407VG).
+	</p>
+</section>
+
+<img alt="My logo" src="6.png" height="100" width="100">
+<footer><a href="#top">Go back to the top.</a></footer>
+</body>
+</html>
